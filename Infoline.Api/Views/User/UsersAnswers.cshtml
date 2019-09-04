@@ -1,0 +1,30 @@
+﻿@model Infoline.Api.ViewModels.UsersAnswersViewModel
+@{
+    ViewData["Title"] = "UsersAnswers";
+}
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Kullanıcı Adı</th>
+                <th>Soru</th>
+                <th>Cevap</th>
+                <th>Cevaplanma Tarihi</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.UsersAnswers)
+            {
+            <tr>
+                <td>@item.UserName</td>
+                <td>@item.QuestionText</td>
+                <td>@item.AnswerText</td>
+                <td>@item.AnswerDate</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

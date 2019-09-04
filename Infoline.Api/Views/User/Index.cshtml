@@ -1,0 +1,50 @@
+﻿@model Infoline.Api.ViewModels.UserInfoViewModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cinsiyet </th>
+                            <th scope="col">Telefon </th>
+                            <th scope="col">Email </th>
+                            <th scope="col">Kullanıcı Adı</th>
+                            <th scope="col">Adı </th>
+                            <th scope="col">Soyadı </th>
+                            <th scope="col">Yaşı  </th>
+                            <th scope="col">Şehir </th>
+                            <th scope="col">Posta Kodu</th>
+                            <th scope="col">Aksiyon</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Users)
+                        {
+                            <tr>
+                                <td>@item.gender</td>
+                                <td>@item.cell </td>
+                                <td>@item.email</td>
+                                <td>@item.username</td>
+                                <td>@item.first</td>
+                                <td>@item.last </td>
+                                <td>@item.age  </td>
+                                <td>@item.city </td>
+                                <td>@item.postcode</td>
+                                <td>
+                                    <a asp-action="Delete" asp-controller="User" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
