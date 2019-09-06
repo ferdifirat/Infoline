@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Infoline.Api.Entities
 {
-    public class Context : DbContext
+    public class InfolineContext : DbContext
     {
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Question> Questions { get; set; }

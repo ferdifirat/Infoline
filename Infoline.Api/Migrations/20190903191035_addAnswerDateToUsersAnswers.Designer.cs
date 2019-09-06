@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infoline.Api.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(InfolineContext))]
     [Migration("20190903191035_addAnswerDateToUsersAnswers")]
     partial class addAnswerDateToUsersAnswers
     {

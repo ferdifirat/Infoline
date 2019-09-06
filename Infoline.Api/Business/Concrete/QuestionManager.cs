@@ -1,6 +1,7 @@
 ﻿using Infoline.Api.Business.Abstract;
 using Infoline.Api.DataAccess.Abstract;
 using Infoline.Api.Dto;
+using Infoline.Api.Entities;
 using Infoline.Api.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,16 @@ namespace Infoline.Api.Business.Concrete
         public QuestionManager(IQuestionDal questionDal)
         {
             _questionDal = questionDal;
+        }
+
+        public bool AddQuestion(string question)
+        {
+            var addQuestion = new Question()
+            {
+                Text = question
+            };
+            _questionDal.Add(addQuestion);
+            return _questionDal.SaveChanges();
         }
 
         public QuestionDto GetRandomQuestion()

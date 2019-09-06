@@ -1,0 +1,11 @@
+﻿@model Infoline.Api.ViewModels.QuestionViewModel
+@{
+    ViewData["Title"] = "AddQuestion";
+}
+
+
+<form asp-controller="User" asp-action="AddQuestion" method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="text" name="question" id="question" placeholder="Lütfen bir soru yazınız.." /><br />
+    <input type="submit" value="Ekle" class="btn btn-primary" />
+</form>

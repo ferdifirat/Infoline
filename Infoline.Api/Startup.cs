@@ -40,10 +40,10 @@ namespace Infoline.Api
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-           
-            services.AddTransient<DbContext, Context>();
+            #region
+            services.AddTransient<DbContext, InfolineContext>();
             services.AddScoped(typeof(IEntityRepository<>), typeof(EfRepositoryBase<>));
-            
+            #endregion
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 

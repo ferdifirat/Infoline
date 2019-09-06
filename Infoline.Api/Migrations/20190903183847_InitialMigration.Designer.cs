@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infoline.Api.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(InfolineContext))]
     [Migration("20190903183847_InitialMigration")]
     partial class InitialMigration
     {

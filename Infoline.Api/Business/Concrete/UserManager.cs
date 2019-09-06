@@ -29,15 +29,15 @@ namespace Infoline.Api.Business.Concrete
             {
                 var user = new User()
                 {
-                    Age = item.age,
-                    Cell = item.cell,
-                    City = item.city,
-                    Email = item.email,
-                    FirstName = item.first,
-                    Gender = item.gender,
-                    LastName = item.last,
-                    PostCode = item.postcode,
-                    UserName = item.username
+                    Age = item.Age,
+                    Cell = item.Cell,
+                    City = item.City,
+                    Email = item.Email,
+                    FirstName = item.FirstName,
+                    Gender = item.Gender,
+                    LastName = item.LastName,
+                    PostCode = item.PostCode,
+                    UserName = item.UserName
 
                 };
                 _userDal.Add(user);
@@ -79,15 +79,15 @@ namespace Infoline.Api.Business.Concrete
                 {
                     var user = new UserDto()
                     {
-                        gender = item.Gender,
-                        cell = item.Cell,
-                        email = item.Email,
-                        username = item.Login.UserName,
-                        first = item.Name.First,
-                        last = item.Name.Last,
-                        age = item.Dob.Age,
-                        city = item.Location.City,
-                        postcode = item.Location.Postcode,
+                        Gender = item.Gender,
+                        Cell = item.Cell,
+                        Email = item.Email,
+                        UserName = item.Login.UserName,
+                        FirstName = item.Name.First,
+                        LastName = item.Name.Last,
+                        Age = item.Dob.Age,
+                        City = item.Location.City,
+                        PostCode = item.Location.Postcode,
                     };
 
                     response.Users.Add(user);

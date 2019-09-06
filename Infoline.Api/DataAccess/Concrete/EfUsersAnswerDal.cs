@@ -21,7 +21,7 @@ namespace Infoline.Api.DataAccess.Concrete
         public UsersAnswersViewModel GetAnswersWithDetails()
         {
             var result = new UsersAnswersViewModel();
-            using (var context = new Context())
+            using (var context = new InfolineContext())
             {
                 result.UsersAnswers = context.UserAnswers
                                              .Include(x => x.User)

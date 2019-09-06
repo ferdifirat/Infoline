@@ -23,7 +23,7 @@ namespace Infoline.Api.Controllers
 
         public UserController(
             IUsersAnswerService usersAnswerService,
-            IUserService userService, 
+            IUserService userService,
             IQuestionService questionService)
         {
             _usersAnswerService = usersAnswerService;
@@ -111,5 +111,28 @@ namespace Infoline.Api.Controllers
             return View(viewModel);
         }
 
+
+        public IActionResult AddQuestion()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddQuestion(string question)
+        {
+            var addQuestion = _questionService.AddQuestion(question);
+
+            if (addQuestion)
+            {
+                return RedirectToAction("Index", "User");
+            }
+            else
+            {
+                return Content("Hata oluştu daha sonra tekrar deneyiniz.");
+
+            }
+
+        }
     }
 }

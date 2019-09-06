@@ -24,15 +24,15 @@
                     @for (int i = 0; i < Model.Users.Count; i++)
                     {
                         <tr>
-                            <td>@Html.TextBox("users[" + @i + "].gender", Model.Users[i].gender, new { @readonly = "readonly" }) </td>
-                            <td>@Html.TextBox("users[" + @i + "].cell", Model.Users[i].cell, new { @readonly = "readonly" }) </td>
-                            <td>@Html.TextBox("users[" + @i + "].email", Model.Users[i].email, new { @readonly = "readonly" }) </td>
-                            <td>@Html.TextBox("users[" + @i + "].username", Model.Users[i].username, new { @readonly = "readonly" }) </td>
-                            <td>@Html.TextBox("users[" + @i + "].first", Model.Users[i].first, new { @readonly = "readonly" }) </td>
-                            <td>@Html.TextBox("users[" + @i + "].last", Model.Users[i].last, new { @readonly = "readonly" }) </td>
-                            <td>@Html.TextBox("users[" + @i + "].age", Model.Users[i].age, new { @readonly = "readonly" }) </td>
-                            <td>@Html.TextBox("users[" + @i + "].city", Model.Users[i].city, new { @readonly = "readonly" }) </td>
-                            <td>@Html.TextBox("users[" + @i + "].postcode", Model.Users[i].postcode, new { @readonly = "readonly" }) </td>
+                            <td>@Html.TextBox("users[" + @i + "].gender", Model.Users[i].Gender, new { @readonly = "readonly" }) </td>
+                            <td>@Html.TextBox("users[" + @i + "].cell", Model.Users[i].Cell, new { @readonly = "readonly" }) </td>
+                            <td>@Html.TextBox("users[" + @i + "].email", Model.Users[i].Email, new { @readonly = "readonly" }) </td>
+                            <td>@Html.TextBox("users[" + @i + "].username", Model.Users[i].UserName, new { @readonly = "readonly" }) </td>
+                            <td>@Html.TextBox("users[" + @i + "].first", Model.Users[i].FirstName, new { @readonly = "readonly" }) </td>
+                            <td>@Html.TextBox("users[" + @i + "].last", Model.Users[i].LastName, new { @readonly = "readonly" }) </td>
+                            <td>@Html.TextBox("users[" + @i + "].age", Model.Users[i].Age, new { @readonly = "readonly" }) </td>
+                            <td>@Html.TextBox("users[" + @i + "].city", Model.Users[i].City, new { @readonly = "readonly" }) </td>
+                            <td>@Html.TextBox("users[" + @i + "].postcode", Model.Users[i].PostCode, new { @readonly = "readonly" }) </td>
                         </tr>
                     }
                 </tbody>

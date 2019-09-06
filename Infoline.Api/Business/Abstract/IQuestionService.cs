@@ -10,5 +10,6 @@ namespace Infoline.Api.Business.Abstract
     public interface IQuestionService
     {
         QuestionDto GetRandomQuestion();
+        bool AddQuestion(string question);
     }
 }
